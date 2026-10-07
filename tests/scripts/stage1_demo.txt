@@ -1,0 +1,9 @@
+ls
+ls -l /tmp
+cd /tmp
+echo_unknown
+cd a b
+exit 1
+ls $HOME
+ls "two words"
+exit

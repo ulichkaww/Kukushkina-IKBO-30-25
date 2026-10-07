@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vfs name="locked">
+  <file name="public.txt">open</file>
+  <dir name="private" mode="000">
+    <file name="x.txt">hidden</file>
+  </dir>
+  <dir name="noexec" mode="644">
+    <file name="y.txt">y</file>
+  </dir>
+</vfs>

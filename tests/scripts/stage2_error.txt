@@ -1,0 +1,5 @@
+# Скрипт останавливается на первой ошибке (строка 4)
+ls
+cd /tmp
+cd a b
+ls this_line_is_not_executed

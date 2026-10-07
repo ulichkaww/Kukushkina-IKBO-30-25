@@ -1,0 +1,43 @@
+# Стартовый скрипт этапа 5: chmod меняет права только в памяти
+# (ошибки проверяются в run_stage5.bat и в unit-тестах)
+
+ls -l
+
+# --- восьмеричный режим
+chmod 600 readme.txt
+ls -l readme.txt
+chmod 0755 readme.txt
+ls -l readme.txt
+
+# --- символьный режим: u/g/o/a, +, -, =, несколько выражений
+chmod u+x,go-r readme.txt
+ls -l readme.txt
+chmod a=r readme.txt
+ls -l readme.txt
+chmod +x readme.txt
+ls -l readme.txt
+chmod go= readme.txt
+ls -l readme.txt
+
+# --- несколько путей и относительные пути
+cd home/alex
+chmod 640 notes.txt docs/plan.txt
+ls -l . docs
+
+# --- рекурсивно (-R)
+cd /
+chmod -R go-rwx home
+ls -l home home/alex/docs
+chmod -R 755 home
+ls -l home home/alex/docs
+
+# --- права влияют на команды: запрет входа и чтения
+chmod 000 secret
+ls -l
+chmod 755 secret
+cd secret
+ls -l
+cd /
+chmod 000 /secret
+ls -l
+exit

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vfs name="files">
+  <file name="a.txt">file a</file>
+  <file name="b.txt">file b</file>
+  <file name="notes.txt" mode="600">some notes</file>
+  <file name="data.bin" encoding="base64">AAECAwQFBgcICQoLDA0ODw==</file>
+</vfs>

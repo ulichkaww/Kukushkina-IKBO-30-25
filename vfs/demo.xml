@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vfs name="demo">
+  <file name="readme.txt">Демонстрационная VFS
+Строка 2
+</file>
+  <dir name="home">
+    <dir name="alex">
+      <file name="notes.txt">Мои заметки</file>
+      <file name=".hidden" mode="600">скрытый файл</file>
+      <dir name="docs">
+        <file name="plan.txt">1. Этап 1
+2. Этап 2
+</file>
+        <file name="report.md" mode="644"># Отчёт</file>
+        <file name="image.bin" encoding="base64">iVBORw0KGgo=</file>
+      </dir>
+    </dir>
+    <dir name="guest">
+      <file name="hello.txt">hello</file>
+    </dir>
+  </dir>
+  <dir name="bin" mode="755">
+    <file name="tool" mode="755">#!/bin/sh</file>
+  </dir>
+  <dir name="secret" mode="700">
+    <file name="key.txt" mode="600">top secret</file>
+  </dir>
+</vfs>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vfs name="deep">
+  <dir name="level1">
+    <file name="one.txt">1</file>
+    <dir name="level2">
+      <file name="two.txt">22</file>
+      <dir name="level3">
+        <file name="three.txt">333</file>
+        <dir name="level4">
+          <file name="four.txt">4444</file>
+        </dir>
+      </dir>
+    </dir>
+  </dir>
+  <dir name="empty"/>
+</vfs>

@@ -1,0 +1,4 @@
+{
+  "vfs": "vfs/demo.xml",
+  "script": "tests/scripts/stage5_start.txt"
+}

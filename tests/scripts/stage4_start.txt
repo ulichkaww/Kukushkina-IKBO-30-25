@@ -1,0 +1,49 @@
+# Стартовый скрипт этапа 4: ls, cd, du, find во всех режимах
+# (стартовый скрипт останавливается на первой ошибке,
+# поэтому ошибки проверяются в run_stage4.bat и в unit-тестах)
+
+# --- ls: текущая папка, длинный формат, скрытые файлы
+ls
+ls -l
+ls -la home/alex
+ls -a /home/alex
+
+# --- ls: путь, файл, несколько операндов
+ls home
+ls readme.txt
+ls /home/alex/notes.txt readme.txt home bin
+
+# --- cd: относительный, абсолютный путь, .. и корень
+cd home/alex
+ls
+cd docs
+ls -l
+cd ../..
+ls
+cd /home/alex/docs
+cd
+ls
+
+# --- du: байты, -a, -s, -h, несколько путей, файл
+du
+du home
+du -s home
+du -a home/alex
+du -h home bin
+du -sh /
+du readme.txt
+
+# --- find: всё дерево, -name, -type, пути
+find
+find home -name "*.txt"
+find / -type d
+find home/alex -type f -name "*.md"
+find bin secret -name "*o*"
+find / -name nosuch
+
+# --- команды работают относительно текущей папки
+cd home/alex
+du docs
+find . -name "*.txt"
+find docs ../guest -type f
+exit
